@@ -1,8 +1,7 @@
 {
-  "name": "tenth_assignment",
+  "name": "Restaurant_OdinProject",
   "version": "1.0.0",
-  "description": "restaurant page",
-  "private": true,
+  "description": "Restaurant page as a project from the Odin Project to test out creating modules",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --progress --mode=production",
