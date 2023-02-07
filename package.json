@@ -2,7 +2,7 @@
   "name": "restaurant_odinproject",
   "version": "1.0.0",
   "description": "Restaurant page as a project from the Odin Project to test out creating modules",
-  "main": "webpack.config.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --progress --mode=production",
