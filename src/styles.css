@@ -1,0 +1,136 @@
+@font-face {
+    font-family: "haunted_moon";
+    src: url(./font/october-moon-font/OctoberMoon-deql.ttf);
+  }
+html, body{
+    margin:0;
+    padding:0;
+    min-height:100%;
+    min-width: 100%;
+    background-color:#efaa9e;
+    z-index:-2;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+}
+#content{ 
+    display:block;
+    position:absolute;
+    top:0;
+    z-index:-1;
+    background-image: url(images/clouds_background.jpg),  linear-gradient(to bottom, #6b4b88,50%,#bd697d); 
+    min-width:100%;
+    background-repeat:no-repeat;
+    background-position: top;
+    -webkit-mask-image:-webkit-gradient(linear,left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+}
+#header, #nav, #footer{
+    position: fixed;
+    padding:10px;
+    width:100%;
+}
+#header{
+    top:20px;
+}
+#nav{ 
+    top:100px;
+}
+#main{
+    position: fixed;
+    padding:10px;
+    top:150px;
+}
+
+
+
+#container{
+
+    display:grid;
+    row-gap:20px;
+    column-gap:20px;
+    grid-template-columns:auto auto;
+    text-align: center;  
+    padding:20px;
+}
+#item{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #F0B8DF;
+    border: 2px solid #EB99EB;
+    border-radius:10px;
+    margin:10px;
+    width: 400px;
+    max-height: 300px;;
+  }
+#item_header{
+    display:flex;
+    font-family: "haunted_moon";
+    font-size:larger;
+    margin-top: 0.2em;
+}
+#item_content{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align:center;
+    /*
+    background-color: #F0B8DF;
+    border: 2px solid #EB99EB;
+    */
+    border-radius:10px;
+    margin:10px;
+    width: 98%;
+    height: 80%
+}
+h1{
+    font-family: haunted_moon;
+    text-shadow: 2px 4px 4px #EB99EB;
+    padding:10px;
+}
+
+
+#leftside{
+    display:flex;
+    border-radius:10px;
+    padding:10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    /*
+    background-color: #F0B8DF;
+    */
+}
+
+#rightside{
+    max-width:50%;
+    position:relative;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    background-color: #EB99EB;
+    border-radius:10px;
+    padding:10px;
+    margin-right: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+button{
+    background-color: #6B42DD;
+    padding: 1rem 1.3rem;
+    border: 2px solid #6B42DD;
+    color: #ffffff;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.3rem;
+    position: relative;
+    margin-right: 0.1rem;
+    border-radius:10px;
+  }
+
+  button:hover{
+    background-color: #EB99EB;
+  }
