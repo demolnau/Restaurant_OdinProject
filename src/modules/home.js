@@ -1,3 +1,10 @@
+import star_1 from "../images/star.png"
+import star_2 from "../images/star.png"
+import star_3 from "../images/star.png"
+import star_4 from "../images/star.png"
+import star_5 from "../images/star.png"
+
+
 function createHomePage() {
   const home_header= document.createElement("h1");
   home_header.setAttribute("id","home_header");
@@ -41,29 +48,32 @@ function createReviewItem(){
   const left_side=document.createElement("div")
   left_side.setAttribute("id","leftside")
   left_side.style.maxWidth="40%"
-  const star=document.createElement("img")
-  star.src="../src/images/star.png"
+  const star=new Image()
+  star.src= star_1;
   star.style.maxWidth= "20%"
   star.style.height="auto"
   left_side.appendChild(star)
-  const star2=document.createElement("img")
-  star2.src="../src/images/star.png"
+
+  const star2=new Image();
+  star2.src=star_2;
   star2.style.maxWidth= "20%"
   star2.style.height="auto"
   left_side.appendChild(star2)
 
-  const star3=document.createElement("img")
-  star3.src="../src/images/star.png"
+  const star3=new Image();
+  star3.src=star_3;
   star3.style.maxWidth= "20%"
   star3.style.height="auto"
   left_side.appendChild(star3)
-  const star4=document.createElement("img")
-  star4.src="../src/images/star.png"
+
+  const star4=new Image();
+  star4.src=star_4;
   star4.style.maxWidth= "20%"
   star4.style.height="auto"
   left_side.appendChild(star4)
-  const star5=document.createElement("img")
-  star5.src="../src/images/star.png"
+
+  const star5=new Image();
+  star5.src=star_5
   star5.style.maxWidth= "20%"
   star5.style.height="auto"
   left_side.appendChild(star5)
