@@ -1,6 +1,7 @@
-//let myMenu=[]
-//import './styles.css'
-//import Icon from './images/health_potion.png'
+import vampires_kiss_pic from "../images/vampires_kiss_potion.png"
+import necromancer_pic from "../images/necromancer_potion.png"
+import zombie_brain_shot_pic from "../images/zombie_brain_shot_potion.png"
+import witchs_brew_pic from "../images/witchs_brew_potion.png"
 
 
 class Menu{
@@ -42,10 +43,11 @@ return menu
 
 
 class menuItem { 
-constructor(name, description, price){
+constructor(name, description, price, pic){
   this.name = name
   this.description = description
   this.price = price
+  this.pic = pic
   
   this.info = function() { 
     console.log(name + ", Components: " + description+ ", Priced at " + price) ;
@@ -72,6 +74,8 @@ createMenuItem=function(newMenuItem){
   const menuItem_Name = document.createElement('p');
   const menuItem_Components = document.createElement('p');
   const menuItem_Price= document.createElement('p');
+  const menuItem_Image = new Image()
+  
 
 
    //assign the values to the menu items
@@ -83,11 +87,15 @@ createMenuItem=function(newMenuItem){
   menuItem_Price.style.fontFamily="haunted_moon"
   console.log(newMenuItem.name)
   //getting image for the food item
+  menuItem_Image.src = newMenuItem.pic;
+  /*
   const menuItem_Image = document.createElement("img");
+  const text = `${newMenuItem.name.toLowerCase().replace(/ /g,"_").replace(/\'/g,"")}_pic`
   menuItem_Image.src = `../src/images/${newMenuItem.name.toLowerCase().replace(/ /g,"_").replace(/\'/g,"")}_potion.png`;
   menuItem_Image.alt = `${newMenuItem.name}`;
   console.log("image added from : "+ menuItem_Image.src + " using the name "+ newMenuItem.name)
-  
+  */
+
   left_side.appendChild(menuItem_Image);
   right_side.appendChild(menuItem_Name);
   right_side.appendChild(menuItem_Components);
@@ -108,10 +116,10 @@ function loadMenu(){
   main.textContent="";
   main.appendChild(myMenu.createMenu());
 
-  let witchs_brew= new menuItem("Witch's Brew","midori melon liquor, orange juice, lemon lime soda", "one toad")
-  let vampires_kiss= new menuItem("Vampire's Kiss", "Rasberries, Cranberry juice, Sparking Wine, Vodka, Chambord", "vampire fang")
-  let necromancer = new menuItem("Necromancer","Gin, Cointreau, lemon juice, vermouth, abisinthe, creme de violette", "coffin nail")
-  let zombie_brain = new menuItem("Zombie Brain Shot", "Peach Schnapps, creme de menthe, Baileys, grenadine", "brains")
+  let witchs_brew= new menuItem("Witch's Brew","midori melon liquor, orange juice, lemon lime soda", "one toad",witchs_brew_pic)
+  let vampires_kiss= new menuItem("Vampire's Kiss", "Rasberries, Cranberry juice, Sparking Wine, Vodka, Chambord", "vampire fang", vampires_kiss_pic)
+  let necromancer = new menuItem("Necromancer","Gin, Cointreau, lemon juice, vermouth, abisinthe, creme de violette", "coffin nail",necromancer_pic)
+  let zombie_brain = new menuItem("Zombie Brain Shot", "Peach Schnapps, creme de menthe, Baileys, grenadine", "brains", zombie_brain_shot_pic)
   myMenu.addMenuItem(witchs_brew)
   myMenu.addMenuItem(vampires_kiss)
   myMenu.addMenuItem(necromancer)
