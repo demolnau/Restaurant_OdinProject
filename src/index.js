@@ -49,16 +49,16 @@ function createTabs() {
 }
 
 function init(){
-
+  /*
+  const content = document.createElement('div');
+  content.setAttribute("id","content");
+  console.log("content id has been created")
+  */
   const content = document.getElementById('content');
   const clouds = new Image();
   clouds.src = cloudsBackground;
   content.appendChild(clouds)
-  //const bi = document.getElementsByClassName("body");
-
   const header =document.getElementById('header')
-  //const main = document.getElementById('main')
-  //main.textContent= ""
 
   /*
   const footer = document.getElementById('footer')
@@ -72,6 +72,7 @@ function init(){
   
 
   loadHome();
+  return content
 
 }
 
