@@ -85,15 +85,17 @@ createMenuItem=function(newMenuItem){
   menuItem_Components.textContent = newMenuItem.description;
   menuItem_Price.textContent = "Price: " + newMenuItem.price;
   menuItem_Price.style.fontFamily="haunted_moon"
-  console.log(newMenuItem.name)
+  //console.log(newMenuItem.name)
   //getting image for the food item
   menuItem_Image.src = newMenuItem.pic;
+  menuItem_Image.alt = 'Potion pictures provided by Pinterest: https://www.pinterest.com/pin/7036943158954274/';
+  console.log(menuItem_Image.alt)
   /*
   const menuItem_Image = document.createElement("img");
   const text = `${newMenuItem.name.toLowerCase().replace(/ /g,"_").replace(/\'/g,"")}_pic`
   menuItem_Image.src = `../src/images/${newMenuItem.name.toLowerCase().replace(/ /g,"_").replace(/\'/g,"")}_potion.png`;
-  menuItem_Image.alt = `${newMenuItem.name}`;
-  console.log("image added from : "+ menuItem_Image.src + " using the name "+ newMenuItem.name)
+  
+  
   */
 
   left_side.appendChild(menuItem_Image);

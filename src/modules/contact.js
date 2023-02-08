@@ -84,11 +84,13 @@ createContact=function(newContactItem){
   const contactImage=new Image();
   if(newContactItem.name=='Anise Fartsparkler'){
     contactImage.src = anise_fartsparkler_picture;
+    contactImage.alt = "Concept Art provided for Anise Fartsparkler profile picture by vickisigh.bigcartel.com via Pinterest"
   }
   else{
     contactImage.src = baba_yaga_picture;
+    contactImage.alt = "Baba Yaga profile picture provided by Tora via Twitter at https://twitter.com/torakhrow/status/1390059774214090756?s=20"
   }
-  console.log(contactImage.src)
+  console.log(contactImage.alt)
   left_side.appendChild(contactImage)
 
   right_side.appendChild(contactName);
